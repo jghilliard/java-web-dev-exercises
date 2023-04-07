@@ -1,13 +1,10 @@
 package org.launchcode.java.studios.RestaurantMenu;
-
-import java.awt.*;
-import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Menu {
-    ArrayList<MenuItems> fullMenu = new ArrayList<MenuItems>();
+    ArrayList<MenuItems> fullMenu = new ArrayList<>();
     LocalDate lastUpdated = LocalDate.now();
 //    public static void main(String[] args) {
 //        //String name;
@@ -35,13 +32,16 @@ public class Menu {
         }
 
         public void menuPrinter () {
+            for (MenuItems food : fullMenu) {
+                itemPrinter(food);
+            }System.out.println("Our Menu is new as of: " + menuUpdated());
 
         }
 
         public void itemPrinter (MenuItems item){
             String itemReport = "";
-            itemReport += item.getName() + ": " + item.getDesc() + ": "
-                    + item.getType() + ": " + item.getPrice() + ": " + item.getNew();
+            itemReport += item.getName() + ":\n" + item.getDesc() + "\n"
+                    + item.getType() + "\n" + item.getPrice() + "\n" + item.getNew()+ "\n\n";
             System.out.println(itemReport);
         }
 

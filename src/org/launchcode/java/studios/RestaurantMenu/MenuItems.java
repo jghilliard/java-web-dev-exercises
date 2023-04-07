@@ -7,9 +7,21 @@ public class MenuItems {
     private boolean isNew;
     private String description;
     private double price;
-    private String type;
+
     //appetizer, main course, dessert
-    
+    private String type;
+
+
+    //Constructors
+    public MenuItems(String name, String description, boolean isNew, double price, String type){
+        this.name = name;
+        this.isNew = isNew;
+        this.description = description;
+        this.price = price;
+        this.type = type;
+    }
+    public MenuItems(){}
+
 
     //Getters and setters
     public void setName(String name){this.name = name;}

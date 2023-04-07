@@ -29,10 +29,16 @@ public class Restaurant {
         item2.setPrice(0.99);
         newMenu.addItem(item2);
 
+        MenuItems item3 = new MenuItems("Smoothie", "A Creamy strawberry smoothie", false, 2.99, "Appetizer" );
+        newMenu.addItem(item3);
 
-        newMenu.itemPrinter(item);
-        newMenu.itemPrinter(item1);
-        newMenu.itemPrinter(item2);
+
+//        newMenu.itemPrinter(item);
+//        newMenu.itemPrinter(item1);
+//        newMenu.itemPrinter(item2);
+//        newMenu.itemPrinter(item3);
+        newMenu.menuPrinter();
+
 
     }
 }
