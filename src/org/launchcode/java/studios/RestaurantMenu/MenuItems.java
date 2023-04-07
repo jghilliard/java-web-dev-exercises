@@ -8,13 +8,18 @@ public class MenuItems {
     private String description;
     private double price;
     private String type;
+    //appetizer, main course, dessert
     
 
     //Getters and setters
     public void setName(String name){this.name = name;}
     public String getName(){return this.name;}
     public void setIsNew(boolean fresh){this.isNew = fresh;}
-    public boolean getNew(){ return this.isNew;}
+    public String getNew(){
+        if (this.isNew){
+            return "New Item!";
+        } return "Classic Item";
+    }
     public void setDesc(String descriptor){
         this.description = descriptor;
     }
@@ -22,6 +27,7 @@ public class MenuItems {
     public void setPrice(double fee){this.price = fee;}
     public double getPrice(){return this.price;}
     public void setType(String variety){this.type = variety;}
+    //appetizer, main course, dessert
     public String getType(){return this.type;}
     
     //is equal?

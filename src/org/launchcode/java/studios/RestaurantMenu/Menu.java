@@ -7,44 +7,47 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Menu {
+    ArrayList<MenuItems> fullMenu = new ArrayList<MenuItems>();
+    LocalDate lastUpdated = LocalDate.now();
 //    public static void main(String[] args) {
 //        //String name;
-       ArrayList <MenuItems> fullMenu = new ArrayList<MenuItems>();
-       LocalDate lastUpdated = LocalDate.now();
 //        String lastUpdated;
 //        restart();
-//    }
+//  }
 
-    public void addItem(MenuItems newItem){
-        fullMenu.add(newItem);
-        lastUpdated = LocalDate.now();
-    }
+        public void addItem (MenuItems newItem){
+            fullMenu.add(newItem);
+            lastUpdated = LocalDate.now();
+        }
 
-    public void removeItem(MenuItems itemToRemove){
-        fullMenu.remove(itemToRemove);
-        lastUpdated = LocalDate.now();
+        public void removeItem (MenuItems itemToRemove){
+            fullMenu.remove(itemToRemove);
+            lastUpdated = LocalDate.now();
 
-    }
-    public boolean isNew(MenuItems item){
-        return item.getNew();
-    }
+        }
+        public String isNew (MenuItems item){
+            return item.getNew();
+        }
 
-    public LocalDate menuUpdated(){
-        return lastUpdated;
+        public LocalDate menuUpdated () {
+            return lastUpdated;
 
-    }
+        }
 
-    public void menuPrinter(){
+        public void menuPrinter () {
 
-    }
+        }
 
-    public void itemPrinter(MenuItems item){
+        public void itemPrinter (MenuItems item){
+            String itemReport = "";
+            itemReport += item.getName() + ": " + item.getDesc() + ": "
+                    + item.getType() + ": " + item.getPrice() + ": " + item.getNew();
+            System.out.println(itemReport);
+        }
 
-    }
-
-    public boolean itemCheck(MenuItems item1, MenuItems item2){
-        return item1.isEqual(item2);
-    }
+        public boolean itemCheck (MenuItems item1, MenuItems item2){
+            return item1.isEqual(item2);
+        }
 
 //    public static void restart() {
 //        Scanner input;
@@ -83,5 +86,5 @@ public class Menu {
 //    public static void addItem() {
 //    }
 
-}
+    }
 
